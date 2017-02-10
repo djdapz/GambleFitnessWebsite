@@ -1,1 +1,178 @@
-<h1> HI </h1>
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Devon D'Apuzzo</title>
+    <meta name="description" content="Gamble Fitness' Project Website'>
+    <meta name="author" content="Devon_John_Dapuzzo">
+
+    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+
+
+<body ng-app="app" ng-controller="appController">
+
+
+
+    <header>
+        <nav class="navbar-fixed-top navbar " id="navbar">
+            <div class="container">
+
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar hamburger-line"></span>
+                        <span class="icon-bar hamburger-line"></span>
+                        <span class="icon-bar hamburger-line"></span>
+                    </button>
+                    <a class="navbar-brand" id='navbar-title' href="#header-image">Gamble Fitness</a>
+                </div>
+
+                <!--TODO smooth scroll to each HREF-->
+                <!-- TODO Fix navbar for smaller windows -->
+                <!--TODO fix orienation of photo-->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="navbar-link" href="#about">ABOUT</a></li>
+                        <li><a class="navbar-link" href="#portfolio">WEEKLY UPDATES</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div id="header-image">
+        <img src="assets/images/nu_3.jpg" />
+        <div class="text-in-header">
+            <h1>
+                Gamble Fitness
+            </h1>
+            <h3>
+               EECS 395 - mHealth - Northwestern University
+            </h3>
+        </div>
+
+    </div>
+
+
+    <div class="section" id="my-about">
+        <div class="scroll-to-patch" id="about">
+        </div>
+        <div class="container">
+            <div class="title-bar">
+                <h1>
+                    ABOUT
+                </h1>
+
+            </div>
+
+            <div class="row">
+                <div class="underline">
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/images/active.jpg" />
+                </div>
+                <div class="col-md-6">
+
+
+
+
+                    <p>
+                        With recent studies  showing that physical activity monitoring devices such as the Fitbit do not actually aid in long-term habit formation or activity increase, new ideas must be brought to the table on how to increase user activity levels within the Quantified Self movement.  Habit formation requires intentional thinking by the user as well as behavioral adaptation to sustain and maintain changes in lifestyle. This will empower individuals to not only track their activity levels but also work to improve them over time.
+                    </p>
+                    <p>
+                        One of the methods being explored currently is the ‘gamification’ of activity tracking, where users have to think about their activity levels and therefore evaluate if they are exerting enough throughout the day in order to ‘win’ the game. By making the game interactive and rewarding, we hope that users will be motivated to develop long-term exercise habits.                    </p>
+                    <p>
+                        Our hypothesis is that ndividuals who are exposed to the gaming strategy of approximating their activity levels will be more engaged in the intervention and remain more physically active as compared to a simple display of fitness information (e.g. Fitbit).                    </p>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="section" id="my-resume">
+        <div class="scroll-to-patch" id="resume">
+        </div>
+        <div class="container">
+
+            <div class="title-bar row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <h1>
+                        Weekly Updates
+                    </h1>
+                </div>
+            </div>
+
+
+
+            <div class="detail-section" id="top-detail-section">
+
+                <hr/>
+                <div ng-repeat="x in y">
+
+
+                </div>
+                <div ng-repeat="week in weeks">
+                    <div class="row detail-row">
+                        <div class="col-md-3 col-md-offset-1">
+                            <h3>
+                                {{week.title}}
+                            </h3>
+                        </div>
+                        <div class="col-md-7">
+                            <ul>
+                                <li ng-repeat="item in week.items">
+                                    {{item}}
+                                </li>
+                            </ul>
+
+                            <div ng-if="week !== weeks[week.length-1]">
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+<!--Dependencies-->
+
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/ng-resource/ng-resource.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<!--My Javascript-->
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/app.services.js"></script>
+<script type="text/javascript" src="app/app.controller.js"></script>
+<script type="text/javascript" src="js/jqueryComponents.js"></script>
+
+</html>
