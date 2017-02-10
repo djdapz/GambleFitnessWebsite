@@ -1,0 +1,15 @@
+{
+  "name": "gamble-fitness-website",
+  "version": "1.0.0",
+  "description": "website for mHealth gamble fitness project - northwestern university",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Devon D'Apuzzo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
