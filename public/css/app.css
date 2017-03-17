@@ -132,7 +132,11 @@ p, div {
 
 
 #my-about{
-    background-color: #f0f0f0;
+     background-color: #f0f0f0;
+ }
+
+#my-about-purple{
+    background-color: #C5BBDA;
 }
 
 #my-portfolio{
@@ -182,6 +186,15 @@ span[class*="glyphicon-one-dot"] {
     border-top: 1px solid white;
 }
 
+
+/*About Me Styles*/
+#my-about-purple img{
+    width:50%
+}
+
+#my-about-purple hr{
+    border-top: 1px solid white;
+}
 
 
 
